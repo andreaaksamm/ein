@@ -1,0 +1,34 @@
+<div class="post-section-wrapper share">
+	<div class="post-heading canvas">
+		<span class="post-heading-text">{{t "Share"}}</span>
+	</div>
+
+	<div class="post-section canvas">
+		<ul class="post-share">
+			<li class="post-share-item">
+				<a class="post-share-content" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+					<span class="post-share-icon share-fb">{{> "icons/facebook"}}</span>
+					<span class="post-share-item-name share-fb">Facebook</span>
+				</a>
+			</li>
+			<li class="post-share-item">
+				<a class="post-share-content" href="https://twitter.com/share?text={{title}}&url={{url absolute="true"}}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+					<span class="post-share-icon share-tw">{{> "icons/twitter"}}</span>
+					<span class="post-share-item-name share-tw">Twitter</span>
+				</a>
+			</li>
+			<li class="post-share-item">
+				<a href="mailto:?subject={{title}}&amp;body={{url absolute="true"}}" class="post-share-content">
+					<span class="post-share-icon share-email">{{> "icons/mail"}}</span>
+					<span class="post-share-item-name share-email">Email</span>
+				</a>
+			</li>
+			<li class="post-share-item">
+				<button  aria-label="Copy post link to clipboard" class="post-share-content clipboard" data-clipboard-text="{{url absolute="true"}}">
+					<span class="post-share-icon share-permalink">{{> "icons/permalink"}}</span>
+					<span class="post-share-item-name share-permalink">Permalink</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>

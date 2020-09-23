@@ -1,0 +1,23 @@
+<div class="page-header post-header {{#if feature_image}}with-background{{else}}canvas{{/if}}">
+
+	{{#if feature_image }}
+	<picture class="post-header-bg">
+		<img class="post-header-bg-image"
+				 srcset="{{img_url feature_image size="s"}} 300w,
+				         {{img_url feature_image size="m"}} 600w,
+				         {{img_url feature_image size="l"}} 1000w,
+				         {{img_url feature_image size="xl"}} 2000w"
+				         sizes="(max-width: 1000px) 1000px, 2000px"
+				         loading="lazy"
+				         src="{{img_url feature_image size="l"}}"
+				         alt="{{title}}"
+		/>
+	</picture>
+	{{/if}}
+
+	<div class="page-header-wrapper {{#if feature_image}}inner{{/if}}">
+		<div class="page-info">
+			<h1 class="page-title">{{ title }}</h1>
+		</div>
+	</div>
+</div>

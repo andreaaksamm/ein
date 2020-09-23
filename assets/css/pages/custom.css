@@ -1,0 +1,25 @@
+.custom-page-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.custom-page-content {
+	margin: 8rem 0;
+	text-align: center;
+}
+
+.custom-page-content > * + * {
+	margin-top: 2rem;
+}
+
+@media (min-width: 550px) {
+	.custom-page-content {
+		min-width: 50%;
+		max-width: 620px;
+	}
+}
+
+.contact-form {
+	max-width: 550px;
+}

@@ -1,0 +1,28 @@
+{{!< ../maintall}}
+{{#if @member}}
+
+	{{!-- Logged in: Redirect home --}}
+	<script>window.location = '{{@site.url}}';</script>
+
+{{else}}
+
+	<div class="inner members-page">
+		<form class="members-page-content" data-members-form="signin">
+			<h1 class="members-page-title">{{t "Welcome Back!"}}</h1>
+			<p class="members-page-text">{{t "Sign into your account again for full access."}}</p>
+
+			<div class="members-page-input input-with-button">
+				<input data-members-email aria-label="Email Address" type="email" class="input" placeholder="{{t 'Type your email...'}}" required="true" autocomplete="false" autofocus />
+				<div class="input-button">
+					<div class="loader">{{> "icons/bars"}}</div>
+					<button aria-label="Sign In submit" type="submit">→</button>
+				</div>
+			</div>
+			<div class="message-success"><strong>{{t "Great!"}}</strong> {{t "Check your inbox and click the link to complete signin"}}</div>
+			<div class="message-error">{{t "Please enter a valid email address!"}}</div>
+
+			<p class="members-page-rel">{{t "Don't have an account yet? Become a"}} <a href="/signup">{{t "Subscriber"}}</a>.</p>
+		</form>
+	</div>
+
+{{/if}}

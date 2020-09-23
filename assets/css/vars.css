@@ -1,0 +1,92 @@
+/* Variables
+/* ---------------------------------------------------------- */
+
+:root {
+	/* Colours */
+	--color-primary: #000;
+
+	--color-base: #1a1a1a;
+	--color-base-dark: #ffffff;
+	--color-base-hover: #595959;
+	--color-base-active: #000;
+
+	--color-border: #e9e9e9;
+	--color-border-dark: #0b0b0b;
+
+	--color-placeholder: #d3d3d3;
+	--color-placeholder-dark: #0b0b0b;
+
+	--color-info: #808080;
+	--color-deactivated: #e5e5e5;
+
+	--color-success: #407340;
+	--color-error: #913030;
+
+	--color-background: #fff;
+	--color-background-dark: #020202;
+	--color-background-hover-dark: #0b0b0b;
+
+	--color-selection: #cbeafb;
+	--color-selection-code: #131313;
+
+	--color-hover: #ddd;
+	--color-active: #c8c8c8;
+
+	--color-actions: #2f2f2f;
+	--color-actions-dark: #fff;
+	--color-actions-hover: #111;
+	--color-actions-active: #595959;
+
+	--color-arrows: #6a6a6a;
+	--color-arrows-hover: #1a1a1a;
+	--color-arrows-active: #595959;
+
+	--color-social-links: #d9d9d9;
+	--color-social-links-footer: #b5b4b4;
+	--color-social-links-footer-hover: #828282;
+
+	--color-facebook: #1877F2;
+	--color-twitter: #1DA1F2;
+	--color-instagram: #E4405F;
+	--color-github: #181717;
+	--color-linkedin: #0077B5;
+	--color-mastodon: #3088D4;
+	--color-pinterest: #BD081C;
+	--color-youtube: #FF0000;
+
+	--color-progress-bar: var(--color-base);
+
+	--color-rss: #FFA500;
+
+	--color-email: #4f8110;
+	--color-permalink: #111;
+
+	--color-action: #236ed1;
+	--color-action-dark: #5c799f;
+	--color-action-hover: #437fce;
+	--color-action-active: #2062b9;
+
+	/* Fonts */
+	--font-sans-serif: "Cooper Hewitt", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	--font-serif: "Charter", Georgia, Times, serif;
+	--font-mono: "IBM Plex Mono", Menlo, Courier, monospace;
+	--font-light: 100;
+	--font-normal: 400;
+	--font-bold: 700;
+	--font-heavy: 800;
+
+	/* Breakpoints */
+	--xlarge: 1680px;
+	--large: 1280px;
+	--medium: 980px;
+	--small: 740px;
+	--xsmall: 480px;
+
+	/* Sizes */
+	--height: 4rem;
+	--margin: 2rem;
+	--radius: 3px;
+
+	--max-width-large: 1080px;
+	--max-width-medium: 800px;
+}

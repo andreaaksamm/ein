@@ -1,0 +1,35 @@
+{{!< main}}
+
+{{#tag}}
+	<div class="tag-header">
+		<div class="tag-header-wrapper inner">
+			{{#if feature_image}}
+				<div class="tag-image-border">
+					<div class="tag-image" style="background-image: url({{img_url feature_image size="m"}});"></div>
+				</div>
+			{{/if}}
+			<div class="tag-info">
+				<h1 class="tag-name">#{{ slug }}</h1>
+				<div class="tag-content">{{ description }}</div>
+				<div class="tag-post-count">
+					{{plural ../pagination.total empty=(t "No posts") singular=(t "1 post") plural=(t "% posts")}}
+				</div>
+			</div>
+			<div class="tag-rss">
+				<a href="https://feedly.com/i/subscription/feed/{{url absolute="true"}}rss/">
+					{{> "icons/rss" }}
+				</a>
+			</div>
+		</div>
+	</div>
+{{/tag}}
+
+<div class="posts inner">
+	<div class="post-feed">
+		{{#foreach posts}}
+			{{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+			{{> "global/card"}}
+		{{/foreach}}
+	</div>
+	{{pagination}}
+</div>

@@ -1,0 +1,2 @@
+function post(){$("table").wrap("<div class='responsive-table'></div>")}function images(){document.querySelectorAll(".kg-gallery-image img").forEach((function(e){var t=e.closest(".kg-gallery-image"),i=e.attributes.width.value/e.attributes.height.value;t.style.flex=i+" 1 0%"})),$(document).ready((function(){$(".post-content").fitVids()})),mediumZoom(document.querySelectorAll(".kg-image")),mediumZoom(document.querySelectorAll(".kg-gallery-image img"))}$(document).ready((function(){pre(),post(),sticky(),progress(),images()}));
+//# sourceMappingURL=page.js.map

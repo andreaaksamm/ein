@@ -1,0 +1,24 @@
+.slick-prev {
+	left: auto;
+	right: 45px;
+	z-index: 1;
+}
+
+.slick-next {
+	right: 15px;
+}
+
+.slick-prev,
+.slick-next {
+	top: auto;
+	bottom: 0px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+	font-family: var(--font-sans-serif);
+}
+
+a.toc-link {
+	pointer-events: none;
+}

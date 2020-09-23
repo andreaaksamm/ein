@@ -1,0 +1,67 @@
+<div class="readmore">
+	{{#prev_post}}
+		<a class="item prev {{#if feature_image}}with-background{{/if}}" href="{{url}}">
+			{{#if feature_image}}
+				<picture class="readmore-bg">
+					<img class="readmore-bg-image"
+							 srcset="{{img_url feature_image size="m"}} 600w,
+								       {{img_url feature_image size="l"}} 1200w,
+								       {{img_url feature_image size="xl"}} 2000w"
+							 sizes="(min-width: 2400px) 2000px,
+										  (min-width: 1200px) 1200px,
+							        600px"
+							 loading="lazy"
+							 src="{{img_url feature_image size="m"}}"
+							 alt="{{title}}"/>
+				</picture>
+			{{/if}}
+			<div class="readmore-content prev-content">
+				<div class="readmore-info">
+					<div class="readmore-info-title">{{t "prev"}}</div>
+					<div class="readmore-title prev-title">{{title}}</div>
+					<div class="readmore-date prev-date">{{date format="MMM DD, YYYY"}}</div>
+				</div>
+			</div>
+		</a>
+	{{else}}
+		<div class="item empty">
+			<div class="readmore-content prev-content">
+				<div class="readmore-info">
+				</div>
+			</div>
+		</div>
+	{{/prev_post}}
+
+	{{#next_post}}
+		<a class="item next {{#if feature_image}}with-background{{/if}}" href="{{url}}">
+			<picture class="readmore-bg">
+				{{#if feature_image}}
+					<img class="readmore-bg-image"
+							 srcset="{{img_url feature_image size="m"}} 600w,
+							         {{img_url feature_image size="l"}} 1200w,
+							         {{img_url feature_image size="xl"}} 2000w"
+							 sizes="(min-width: 2400px) 2000px,
+										  (min-width: 1200px) 1200px,
+							        600px"
+							 loading="lazy"
+							 src="{{img_url feature_image size="m"}}"
+							 alt="{{title}}"/>
+				{{/if}}
+			</picture>
+			<div class="readmore-content next-content">
+				<div class="readmore-info">
+					<div class="readmore-info-title">{{t "next"}}</div>
+					<div class="readmore-title next-title">{{title}}</div>
+					<div class="readmore-date next-date">{{date format="MMM DD, YYYY"}}</div>
+				</div>
+			</div>
+		</a>
+	{{else}}
+		<div class="item empty">
+			<div class="readmore-content next-content">
+				<div class="readmore-info">
+				</div>
+			</div>
+		</div>
+	{{/next_post}}
+</div>

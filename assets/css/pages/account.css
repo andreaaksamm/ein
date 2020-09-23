@@ -1,0 +1,136 @@
+.account-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.account-box {
+	margin: 3rem 0;
+	max-width: 620px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.subscriber-box > * + * {
+	margin-top: 2rem;
+}
+
+.account-box > * + * {
+	margin-top: 1rem;
+}
+
+.subscription > * + * {
+	margin-top: 2rem;
+}
+
+.authbox-signup {
+	margin-top: 2rem;
+}
+
+.subscription-title {
+	margin-top: 1rem;
+}
+
+.subscription-title > * + * {
+	margin-top: 2rem;
+}
+
+.subscriber-details {
+	border: 1px solid var(--color-border);
+	overflow: hidden;
+	text-align: left;
+	border-radius: 3px;
+}
+
+@media (min-width: 550px) {
+	.subscriber-details {
+		margin: 0 auto;
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 2rem;
+	}
+}
+
+.subscriber-details > * + * {
+	border-top: 1px solid var(--color-border);
+}
+
+.subscriber-details > * {
+	padding: 1rem;
+}
+
+@media (min-width: 550px) {
+	.subscriber-details > * {
+		flex: 1 0 50%;
+		border-top: 0;
+	}
+}
+
+.subscription-actions {
+	text-align: center;
+	background-color: #ececec;
+}
+
+.subscription-actions a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.subscription-actions > * {
+}
+
+.subscription-actions > * > a {
+	width: 100%;
+	display: inline-block;
+	padding: 1.25rem 1rem 1rem;
+}
+
+.subscription-actions .action-edit:hover {
+	color: #dbebff;
+	background-color: var(--color-action);
+}
+
+.subscription-actions .action-cancel:hover [data-members-cancel-subscription]{
+	color: #ffd8d8;
+	background-color: var(--color-error);
+}
+
+.subscription-actions .action-cancel:hover [data-members-continue-subscription] {
+	color: #fff;
+	background-color: var(--color-action);
+}
+
+.subscription-actions > * {
+	border-top: 1px solid #d0d0d0;
+}
+
+.loading .action-edit-text {
+	visibility: hidden;
+}
+
+.action-edit a {
+	position: relative;
+}
+
+.action-edit-loader {
+	display: none;
+	line-height: 0;
+}
+
+.loading .action-edit-loader {
+	top: calc(50% - 10px);
+	left: calc(50% - 10px);
+	display: block;
+	position: absolute;
+}
+
+.action-edit-loader svg {
+	fill: #000;
+	width: 20px;
+	height: 20px;
+}
+
+.subscription-actions .action-edit:hover svg {
+	fill: #fff;
+}

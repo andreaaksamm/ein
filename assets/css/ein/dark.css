@@ -1,0 +1,228 @@
+body.dark {
+	color: var(--color-base-dark);
+	background: var(--color-background-dark);
+}
+
+/* components */
+
+.dark a:not([class]) {
+	color: var(--color-base-dark);
+}
+
+.dark .input {
+	color: var(--color-base-dark);
+	border-color: var(--color-border-dark);
+	background: var(--color-background-dark);
+}
+
+.dark .input-with-button .loader svg {
+	fill: var(--color-base-dark);
+}
+
+.dark .button {
+	border-color: var(--color-border-dark);
+}
+
+.dark .button:hover {
+	background: var(--color-background-hover-dark);
+}
+
+/* global */
+
+.dark .site-header {
+	border-color: var(--color-border-dark);
+}
+
+.dark .site-header-inner svg {
+	fill: var(--color-actions-dark);
+}
+
+.dark .site-menu:hover svg,
+.dark .site-search:hover svg {
+	fill: var(--color-actions-hover);
+}
+
+.dark .site-footer {
+	border-color: var(--color-border-dark);
+}
+
+.dark .carousel {
+	background: #060606;
+}
+
+.dark .carousel-empty {
+	border-color: var(--color-border-dark);
+}
+
+/* search */
+
+.dark .search-modal .search-wrapper {
+	background: var(--color-background-dark);
+}
+
+.dark .search-header {
+	border-color: var(--color-border-dark);
+}
+
+.dark .results-wrapper {
+	background: var(--color-background-dark);
+}
+
+.dark #results-container > * + * {
+	border-color: var(--color-border-dark);
+}
+
+.dark .search-item.selected,
+.dark .search-item:hover {
+	background: var(--color-background-hover-dark);
+}
+
+/* post */
+
+.dark .post-heading {
+	background: var(--color-border-dark);
+}
+
+.dark .post-heading-text {
+	background: var(--color-background-dark);
+}
+
+.dark .sticky-header {
+	background: var(--color-background-dark);
+}
+
+.dark .post-progress {
+	border-color: var(--color-border-dark);
+	background-color: var(--color-border-dark);
+}
+
+.dark .readmore {
+	border-color: var(--color-border-dark);
+}
+
+.dark .simple-image-header .post-header-feature img {
+	color: var(--color-placeholder-dark);
+}
+
+.dark .post-share-item-name {
+	color: var(--color-base-dark);
+}
+
+.dark .post-comments-link:hover {
+	color: var(--color-action-dark);
+}
+
+/* menu */
+.dark .menu {
+	border-color: var(--color-border-dark);
+	background-color: var(--color-background-dark);
+}
+
+.dark .menu-member {
+	border-color: var(--color-border-dark);
+}
+
+.dark .readmore .item.empty .readmore-content.next-content {
+	border-color: var(--color-border-dark);
+}
+
+.dark .readmore .item.empty .readmore-content.prev-content {
+	border-color: var(--color-border-dark);
+}
+
+/* membership */
+
+.dark .membership-plan {
+	border-color: var(--color-border-dark);
+}
+
+.dark .membership-plan > * + * {
+	border-color: var(--color-border-dark);
+}
+
+.dark .membership-plan.loading .loader-overlay {
+	background-color: var(--color-background-dark);
+}
+
+.dark .membership-plan.loading .loader svg {
+	fill: var(--color-base-dark);
+}
+
+.dark .subscriber-details {
+	border-color: var(--color-border-dark);
+}
+
+.dark .subscription-actions {
+	background-color: var(--color-background-dark);
+}
+
+.dark .subscription-actions > * {
+	border-color: var(--color-border-dark);
+}
+
+.dark .action-edit-loader svg {
+	fill: var(--color-base-dark);
+}
+
+/* card */
+
+.dark .card-author-name-tooltip {
+	border: 1px solid var(--color-border-dark);
+	bottom: 113%;
+	background-color: var(--color-background-dark);
+}
+
+.dark .card-featured {
+	border-color: var(--color-border-dark);
+	background: var(--color-background-dark);
+}
+
+.dark .card-image .no-image,
+.dark .card-image img {
+	border-color: var(--color-border-dark);
+}
+
+/* author */
+
+.dark .author-header {
+	border-color: var(--color-border-dark);
+}
+
+.dark .card-author-image-wrapper {
+	border-color: var(--color-border-dark);
+	background: var(--color-background-dark);
+}
+
+.dark .post-author-detail-image-border {
+	border-color: var(--color-border-dark);
+}
+
+.dark .author-image-border {
+	border-color: var(--color-border-dark);
+}
+
+.dark .no-background .author-image-border {
+	border-color: var(--color-border-dark);
+}
+
+/* tag */
+.dark .tag-header {
+	border-color: var(--color-border-dark);
+}
+
+.dark .tag-image-border {
+	border-color: var(--color-border-dark);
+}
+
+.dark .tag-rss svg {
+	fill: var(--color-base-dark);
+}
+
+.dark .tag-rss:hover svg {
+	fill: var(--color-rss);
+}
+
+/* utils */
+.dark .u-placeholder {
+	background-color: var(--color-placeholder-dark);
+}

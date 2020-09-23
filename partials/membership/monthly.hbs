@@ -1,0 +1,23 @@
+<a href="javascript:" data-members-plan="Monthly" class="membership-plan plan-monthly">
+  <div class="membership-plan-description">
+    <h3 class="membership-plan-title">{{t "Monthly"}}</h3>
+    <div class="membership-plan-price"><span class="plan-amount">{{@price.currency_symbol}}{{@price.monthly}} </span><span class="plan-period">/ {{t "month"}}</span></div>
+  </div>
+  <div class="membership-plan-meta">
+    <ul class="membership-plan-features">
+      <li class="membership-plan-feature">{{t "Full access to all premium posts"}}</li>
+      <li class="membership-plan-feature">{{t "Regular updates with new content"}}</li>
+      <li class="membership-plan-feature">{{t "Support independent publishing"}}</li>
+      <li class="membership-plan-feature">{{t "Simple, secure card payment"}}</li>
+      <li class="membership-plan-feature empty">-</li>
+    </ul>
+  </div>
+  <div class="membership-plan-action noselect">
+    <div class="text">{{t "Continue"}}</div>
+    <div class="text error">{{t "Error"}}</div>
+  </div>
+  <div class="loader-overlay"></div>
+  <div class="loader">
+    {{> "icons/bars"}}
+  </div>
+</a>

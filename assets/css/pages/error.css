@@ -1,0 +1,17 @@
+.error-content {
+	padding: 20vh 4vw 6vw;
+}
+
+.error-message {
+	text-align: center;
+}
+
+.error-code {
+	font-size: 9rem;
+}
+
+.error-back-link {
+	display: inline-block;
+	margin-top: 0.75rem;
+	text-decoration: underline !important;
+}

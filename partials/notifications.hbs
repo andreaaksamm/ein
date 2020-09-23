@@ -1,0 +1,65 @@
+<div class="notification notification-subscribe">
+	<a class="notification-close" href="javascript:;"></a>
+	{{t "You've successfully subscribed to {blogtitle}" blogtitle=@site.title}}
+</div>
+
+<div class="notification notification-signup">
+	<a class="notification-close" href="javascript:;"></a>
+	{{t "Great! Next, complete checkout for full access to {blogtitle}" blogtitle=@site.title}}
+</div>
+
+<div class="notification notification-signin">
+	<a class="notification-close" href="javascript:;"></a>
+	{{t "Welcome back! You've successfully signed in."}}
+</div>
+
+<div class="notification notification-checkout">
+	<a class="notification-close" href="javascript:;"></a>
+	{{t "Success! Your account is fully activated, you now have access to all content."}}
+</div>
+
+<div class="notification notification-billing-update">
+	<a class="notification-close" href="javascript:;"></a>
+	{{t "Success! Your billing info is updated."}}
+</div>
+
+<div class="notification notification-billing-update-cancel">
+	<a class="notification-close" href="javascript:;"></a>
+	{{t "Billing info update failed."}}
+</div>
+
+<script>
+$(document).ready(function() {
+	if (action == 'subscribe') {
+		$('body').addClass("subscribe-success");
+	}
+	if (action == 'signup') {
+		window.location = '{{@site.url}}/signup/?action=checkout';
+	}
+	if (action == 'checkout') {
+		$('body').addClass("signup-success");
+	}
+	if (action == 'signin') {
+		$('body').addClass("signin-success");
+	}
+	if (stripe == 'success') {
+		console.log("oiwejfoweijfoew");
+		$('body').addClass("checkout-success");
+	}
+	if (stripe == 'billing-update-success') {
+		$('body').addClass("billing-success");
+	}
+	if (stripe == 'billing-update-cancel') {
+		$('body').addClass("billing-cancel");
+	}
+
+	$('.notification-close').click(function () {
+		$(this).parent().addClass('closed');
+		var uri = window.location.toString();
+		if (uri.indexOf("?") > 0) {
+			var clean_uri = uri.substring(0, uri.indexOf("?"));
+			window.history.replaceState({}, document.title, clean_uri);
+		}
+	});
+});
+</script>

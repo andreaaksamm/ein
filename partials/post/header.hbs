@@ -1,0 +1,36 @@
+<div class="post-header {{#if feature_image}}with-background{{else}}canvas{{/if}}">
+
+	{{#if feature_image }}
+	<figure class="post-header-bg">
+		<img class="post-header-bg-image"
+				 srcset="{{img_url feature_image size="l"}} 1200w,
+				         {{img_url feature_image size="xl"}} 2000w"
+				 sizes="(min-width: 1200px) 2000px,
+       				  1200px"
+				 src="{{img_url feature_image size="l"}}"
+				 alt="{{title}}"
+		/>
+	</figure>
+	{{/if}}
+
+	<div class="post-header-wrapper {{#if feature_image}}inner{{/if}}">
+		<div class="post-info">
+			<span class="post-tag">
+				{{#if primary_tag}}
+				{{#primary_tag}}
+				<a class="post-tag-link" href="{{url}}">{{name}}</a>
+				{{/primary_tag}}
+				{{/if}}
+			</span>
+			<h1 class="post-title">{{ title }}</h1>
+			<div class="post-header-meta">
+				<span class="post-authors">
+					{{> "post/header/authors"}}
+				</span>
+				<span class="post-date">
+					on <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMM DD, YYYY"}}</time>
+				</span>
+			</div>
+		</div>
+	</div>
+</div>

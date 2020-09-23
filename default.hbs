@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="{{@site.lang}}">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		{{{block "fonts"}}}
+
+		<link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
+
+		<title>{{meta_title}}</title>
+
+		{{!-- Outputs important meta data and settings, should always be in <head> --}}
+			{{ghost_head}}
+
+		</head>
+		<body class="{{body_class}}">
+			{{> "social"}}
+
+			<div class="site-wrapper">
+				{{> "global/header"}}
+
+				{{{body}}}
+				{{!-- All content gets inserted here, index.hbs, post.hbs, etc --}}
+
+				{{^is "post"}}
+				{{> "global/footer"}}
+				{{/is}}
+			</div>
+
+			{{> "global/search"}}
+
+			<script src="{{asset "built/libs.js"}}"></script>
+			<script src="{{asset "built/main.js"}}"></script>
+
+			{{> "notifications"}}
+			{{> "posts-js"}}
+
+			{{!-- Outputs important scripts - should always be included before closing body tag --}}
+			{{ghost_foot}}
+		</body>
+</html>

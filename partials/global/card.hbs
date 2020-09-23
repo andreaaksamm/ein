@@ -1,0 +1,80 @@
+{{!--
+Re-usable card for linking to posts
+--}}
+
+<div class="card {{post_class}}">
+	<div class="card-header">
+		<div class="card-authors">
+
+			<div class="card-author-images">
+				{{#foreach authors}}
+					<a href="{{url}}" class="card-author-image-wrapper">
+						<div class="card-author-name-tooltip">
+							{{name}}
+						</div>
+						{{#if profile_image}}
+							<div class="card-author-image" style="background-image: url({{img_url profile_image size="xs"}});"></div>
+						{{else}}
+							<div class="card-author-image" style="background-image: url(/assets/images/ghost_xs.png);"></div>
+						{{/if}}
+					</a>
+				{{/foreach}}
+			</div>
+
+			<div class="card-authors-content">
+				<span class="card-authors-names ellipsis">
+					<span class="card-author-name">
+						{{#has author="count:>2"}}Multiple authors{{else}}{{authors}}{{/has}}
+					</span>
+				</span>
+
+				<span class="card-date">
+					<time datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMM DD, YYYY"}}</time>
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="card-image">
+		{{#if feature_image}}
+		<a href="{{url}}">
+			<img class="post-card-image hide-text"
+					srcset="{{img_url feature_image size="m"}} 600w,
+									{{img_url feature_image size="l"}} 1200w"
+					sizes="(min-width: 600px) 1200px,
+							   (min-width: 300px) 600px,
+								 600px"
+					loading="lazy"
+					src="{{img_url feature_image size="m"}}"
+					alt="{{title}}"
+			/>
+		</a>
+		{{else}}
+			<a href="{{url}}" class="no-image"></a>
+		{{/if}}
+		{{#if featured}}
+		<div class="card-featured">{{t "Featured"}}</div>
+		{{/if}}
+	</div>
+
+	<div class="card-content">
+		<div class="card-content-header">
+			{{#if primary_tag}}
+				{{#primary_tag}}
+					<a class="card-tags" href="{{url}}">{{name}}</a>
+				{{/primary_tag}}
+			{{/if}}
+			<span class="card-access">
+			{{^has visibility="public"}}
+				{{#has visibility="members"}}
+					<span>{{t "subscribers"}}</span>
+				{{else}}
+					<span>{{t "paying subscribers"}}</span>
+				{{/has}}
+			{{/has}}
+			</span>
+		</div>
+		<h2 class="card-title"><a href="{{ url }}">{{ title }}</a></h2>
+		<div class="card-excerpt">{{ excerpt }}</div>
+	</div>
+</div>

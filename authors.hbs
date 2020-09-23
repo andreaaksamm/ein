@@ -1,0 +1,56 @@
+{{!< main}}
+
+<div class="inner custom-page">
+	<div class="authors-page">
+		{{#page}}
+			<div class="authors-featured">
+				{{#foreach authors limit="3"}}
+					<a href="{{url}}" class="author-featured">
+						{{#if profile_image}}
+						<div class="author-image-border">
+							<div class="author-image" style="background-image: url({{img_url profile_image size="s"}});"></div>
+						</div>
+						{{else}}
+						<div class="author-image-border">
+							<div class="author-image" style="background-image: url(/assets/images/ghost_s.png);"></div>
+						</div>
+						{{/if}}
+						<h1 class="author-featured-name">
+							{{name}}
+						</h1>
+						<div class="author-featured-count">
+							{{#get "posts" include="authors"  filter="authors:{{slug}}"}}
+								{{plural pagination.total empty=(t "No posts") singular=(t "1 post") plural=(t "% posts")}}
+							{{/get}}
+						</div>
+					</a>
+				{{/foreach}}
+			</div>
+
+			<div class="authors-more">
+				{{#foreach authors from="4"}}
+					<a href="{{url}}" class="author-more">
+						{{#if profile_image}}
+						<div class="author-image-border">
+							<div class="author-image" style="background-image: url({{img_url profile_image size="s"}});"></div>
+						</div>
+						{{else}}
+						<div class="author-image-border">
+							<div class="author-image" style="background-image: url(/assets/images/ghost_s.png);"></div>
+						</div>
+						{{/if}}
+						<h2 class="author-more-name">
+							{{name}}
+						</h2>
+						<div class="author-more-count">
+							{{#get "posts" include="authors"  filter="authors:{{slug}}"}}
+								{{plural pagination.total empty=(t "No posts") singular=(t "1 post") plural=(t "% posts")}}
+							{{/get}}
+						</div>
+					</a>
+				{{/foreach}}
+			</div>
+
+		{{/page}}
+	</div>
+</div>

@@ -1,0 +1,31 @@
+routes:
+  /signup/: members/signup
+  /signin/: members/signin
+  /account/: members/account
+
+  /membership/: membership
+
+  /signup-subscription-demo/: signup-subscription-demo
+  /account-member-demo/: account-member-demo
+  /account-member-subscribe-demo/: account-member-subscribe-demo
+
+  /tags/:
+    data: page.tags
+    template: tags
+
+  /authors/:
+    data: page.authors
+    template: authors
+
+  /contact/:
+    data: page.contact
+    template: contact
+
+collections:
+  /:
+    permalink: /{slug}/
+    template: index
+
+taxonomies:
+  tag: /tag/{slug}/
+  author: /author/{slug}/

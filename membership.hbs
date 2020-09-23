@@ -1,0 +1,37 @@
+{{!< main}}
+
+<div class="inner">
+	<div class="membership-box">
+		<div class="membership-header">
+			<h1 class="membership-title">{{t "Membership"}}</h1>
+			<p class="membership-descriptino">{{t "Become a {blogtitle} member and unlock full access to the entire library of members-only content and updates." blogtitle=@blog.title}}</p>
+		</div>
+		<div class="membership-content">
+			<div class="membership-plans">
+
+				{{> "membership/monthly"}}
+				{{> "membership/yearly"}}
+
+				<a href="/signup" class="membership-plan plan-subscriber">
+					<div class="membership-plan-description">
+						<h3 class="membership-plan-title">{{t "Subscriber"}}</h3>
+						<div class="membership-plan-price"><span class="plan-amount"></span><span class="plan-period">{{t "Free"}}</span></div>
+					</div>
+					<div class="membership-plan-meta">
+						<ul class="membership-plan-features">
+							<li class="membership-plan-feature">{{t "Access to subscriber posts"}}</li>
+							<li class="membership-plan-feature">{{t "Regular updates with new content"}}</li>
+							<li class="membership-plan-feature empty">-</li>
+							<li class="membership-plan-feature empty">-</li>
+							<li class="membership-plan-feature empty">-</li>
+						</ul>
+					</div>
+					<div class="membership-plan-action noselect">
+						{{t "Continue"}}
+					</div>
+				</a>
+
+			</div>
+		</div>
+	</div>
+</div>

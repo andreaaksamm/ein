@@ -1,0 +1,26 @@
+<nav class="menu">
+	<div class="menu-navigation">
+		<ul class="navigation">
+			{{navigation}}
+		</ul>
+	</div>
+	{{#if @labs.members}}
+	<div class="menu-member">
+		<ul class="navigation">
+				{{#if @member}}
+				<li class="navigation-item"><a href="{{@site.url}}/account/">{{t "Account"}}</a></li>
+				<li class="navigation-item"><a href="#signout" data-members-signout>{{t "Log out"}}</a></li>
+				{{else}}
+				<li class="navigation-item"><a href="/membership">{{t "Membership"}}</a></li>
+				<li class="navigation-item"><a href="/signin">{{t "Sign In"}}</a></li>
+				{{/if}}
+		</ul>
+	</div>
+	{{else}}
+	<div class="menu-member">
+		<ul class="navigation">
+			<li class="navigation-item"><a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/">Feed</a></li>
+		</ul>
+	</div>
+	{{/if}}
+</nav>

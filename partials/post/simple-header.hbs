@@ -1,0 +1,24 @@
+<div class="post-header canvas">
+
+	<div class="post-header-wrapper">
+		<div class="post-info">
+			<span class="post-tag">
+				{{#if primary_tag}}
+				{{#primary_tag}}
+				<a class="post-tag-link" href="{{url}}">{{name}}</a>
+				{{/primary_tag}}
+				{{/if}}
+			</span>
+			<h1 class="post-title">{{ title }}</h1>
+			<div class="post-header-meta">
+				<span class="post-authors">
+					{{> "post/header/authors"}}
+				</span>
+				<span class="post-date">
+					on <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMMM DD, YYYY"}}</time>
+				</span>
+			</div>
+		</div>
+	</div>
+
+</div>

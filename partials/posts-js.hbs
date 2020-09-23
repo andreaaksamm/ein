@@ -1,0 +1,19 @@
+{{#is "post"}}
+	<script src="{{asset "built/postlibs.js"}}"></script>
+{{/is}}
+
+{{#is "page"}}
+	<script src="{{asset "built/pagelibs.js"}}"></script>
+{{/is}}
+
+{{#is "post,page"}}
+	<script src="{{asset "built/post-page.js"}}"></script>
+{{/is}}
+
+{{#is "post"}}
+	<script src="{{asset "built/post.js"}}"></script>
+{{/is}}
+
+{{#is "page"}}
+	<script src="{{asset "built/page.js"}}"></script>
+{{/is}}

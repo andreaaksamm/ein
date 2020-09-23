@@ -1,0 +1,79 @@
+{{!< main}}
+
+{{#author}}
+
+	<div class="author-header {{#if cover_image }}with-background{{else}}no-background{{/if}}">
+	{{#if cover_image }}
+		<picture class="author-header-bg">
+			<img class="author-header-bg-image"
+				 srcset="{{img_url cover_image size="l"}} 1200w,
+				         {{img_url cover_image size="xl"}} 2000w"
+				 sizes="(min-width: 1200px) 2000px,
+       				  1200px"
+				 src="{{img_url cover_image size="l"}}"
+				 alt="{{title}}"
+			/>
+		</picture>
+	{{/if}}
+
+	<div class="author-header-wrapper inner">
+
+		<div class="author-image-wrapper">
+			{{#if profile_image}}
+				<div class="author-image-border">
+					<div class="author-image" style="background-image: url({{img_url profile_image size="s"}});"></div>
+				</div>
+			{{else}}
+				<div class="author-image-border">
+					<div class="author-image" style="background-image: url(/assets/images/ghost_s.png);"></div>
+				</div>
+			{{/if}}
+		</div>
+
+		<div class="author-info">
+			<h1 class="author-name">{{name}}</h1>
+			{{#if location}}
+			<div class="author-location">{{t "from"}} {{ location }}</div>
+			{{/if}}
+			{{#if bio}}
+			<div class="author-content">{{ bio }}</div>
+			{{/if}}
+			<div class="author-info-meta">
+				<ul class="author-social">
+					{{#if facebook}}
+					<li class="author-social-item facebook"><a href="{{facebook_url}}" target="_blank">{{> "icons/facebook"}}</a></li>
+					{{/if}}
+					{{#if twitter}}
+					<li class="author-social-item twitter"><a href="{{twitter_url}}" target="_blank">{{> "icons/twitter"}}</a></li>
+					{{/if}}
+					{{#if website}}
+					<li class="author-social-item permalink"><a href="{{website}}" target="_blank">{{> "icons/permalink"}}</a></li>
+					{{/if}}
+				</ul>
+			</div>
+		</div>
+
+		<div class="author-rss">
+			<a href="https://feedly.com/i/subscription/feed/{{url absolute="true"}}rss/">
+				{{> "icons/rss" }}
+			</a>
+		</div>
+
+		<div class="author-post-count">
+			{{plural ../pagination.total empty=(t "No posts") singular=(t "1 post") plural=(t "% posts")}}
+		</div>
+
+	</div>
+</div>
+
+{{/author}}
+
+<div class="posts inner">
+	<div class="post-feed">
+		{{#foreach posts}}
+			{{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+			{{> "global/card"}}
+		{{/foreach}}
+	</div>
+	{{pagination}}
+</div>

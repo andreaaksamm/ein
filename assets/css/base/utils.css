@@ -1,0 +1,51 @@
+.hidden {
+	display: none;
+}
+
+.ellipsis {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.hide-text {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.u-placeholder {
+	z-index: 10;
+	position: relative;
+	background-color: var(--color-placeholder);
+}
+
+.u-placeholder.horizontal::before {
+	content: "";
+	display: block;
+	padding-bottom: 50%;
+}
+
+.u-object-fit {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+
+.demo {
+	display: none;
+}

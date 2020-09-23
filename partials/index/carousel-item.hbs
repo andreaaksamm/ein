@@ -1,0 +1,37 @@
+<a href="{{ url }}" class="carousel-item">
+	<div class="carousel-wrapper">
+		<picture class="carousel-bg">
+			{{#if feature_image}}
+			<img class="carousel-bg-image"
+					 srcset="{{img_url feature_image size="s"}} 300w,
+									 {{img_url feature_image size="m"}} 600w,
+									 {{img_url feature_image size="l"}} 1200w,
+									 {{img_url feature_image size="xl"}} 2000w"
+					 sizes="(min-width: 1200px) 2000px,
+					        (min-width: 600px) 1200px,
+									600px"
+					 loading="lazy"
+					 src="{{img_url feature_image size="m"}}"
+					 alt="{{title}}"
+			/>
+		{{else}}
+			<div class="carousel-bg-image no-image"></div>
+		{{/if}}
+		</picture>
+
+		<div class="carousel-content inner">
+			<h2 class="carousel-title">{{title}}</h2>
+			<div class="carousel-excerpt">{{ excerpt }}</div>
+			<div class="carousel-authors-names">
+				<span class="carousel-author-name">
+					<span class="carousel-name">
+						{{#has author="count:>2"}}Multiple authors{{else}}{{authors autolink="false" separator=" and " prefix="By "}}{{/has}}
+					</span>
+				</span>
+			</div>
+			<div class="carousel-date">
+				<time datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMMM DD, YYYY"}}</time>
+			</div>
+		</div>
+	</div>
+</a>

@@ -1,0 +1,12 @@
+{{!< main}}
+
+{{> "index/carousel"}}
+
+<div class="posts inner">
+	<div class="post-feed">
+		{{#foreach posts visibility="all"}}
+			{{> "global/card"}}
+		{{/foreach}}
+	</div>
+	{{pagination}}
+</div>

@@ -1,0 +1,20 @@
+<div class="post-members">
+	<div class="post-members-excerpt">
+		{{excerpt}}
+		<div class="ellipsis">...</div>
+	</div>
+	<div class="post-members-box">
+
+		<div class="post-members-box-inner">
+			<h2>{{heading}}</h2>
+			{{#has visibility="members"}}
+				<p>{{t "Sign up now to read the post and get access to the full library of posts for subscribers only."}}</p>
+			{{else}}
+				<p>{{t "Sign up now and upgrade your account to read the post and get access to the full library of posts for paying subscribers only."}}</p>
+			{{/has}}
+			<a href="/signup/" class="post-members-button button action">{{t "Sign up now"}}</a>
+			<p class="post-members-signup members-page-rel">{{t "Already a subscriber?"}} <a href="/signin">{{t "Sign In"}}</a>.</p>
+		</div>
+
+	</div>
+</div>

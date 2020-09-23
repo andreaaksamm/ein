@@ -1,0 +1,94 @@
+.notification {
+	visibility: hidden;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 9000;
+	padding: 25px 60px 20px;
+	color: inherit;
+	font-size: 1.6rem;
+	line-height: 1.3em;
+	text-align: center;
+	background: #fff;
+	transition: all 0.35s cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+	transform: translateY(-175%);
+	border-bottom: 1px solid var(--color-border);
+}
+
+.subscribe-success .notification-subscribe {
+	visibility: visible;
+	transform: translateY(0);
+}
+.signup-success .notification-signup {
+	visibility: visible;
+	transform: translateY(0);
+}
+.signin-success .notification-signin {
+	visibility: visible;
+	transform: translateY(0);
+}
+.checkout-success .notification-checkout {
+	visibility: visible;
+	transform: translateY(0);
+}
+.billing-success .notification-billing-update {
+	visibility: visible;
+	transform: translateY(0);
+}
+
+.billing-cancel .notification-billing-update-cancel {
+	visibility: visible;
+	color: white;
+	background: var(--color-error);
+	transform: translateY(0);
+}
+
+.notification.closed {
+	visibility: hidden;
+	transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+	transform: translateY(-175%);
+}
+
+.notification-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: block;
+}
+
+.notification-close:before {
+	content: "";
+	position: absolute;
+	top: 33px;
+	right: 25px;
+	display: block;
+	width: 20px;
+	height: 1px;
+	background: #000;
+	border-radius: 2px;
+	transform: rotate(45deg);
+}
+
+.notification-close:after {
+	content: "";
+	position: absolute;
+	top: 33px;
+	right: 25px;
+	display: block;
+	width: 20px;
+	height: 1px;
+	background: #000;
+	border-radius: 2px;
+	transform: rotate(-45deg);
+}
+
+.notification-billing-update-cancel .notification-close:before {
+	background: #fff;
+}
+
+.notification-billing-update-cancel .notification-close:after {
+	background: #fff;
+}

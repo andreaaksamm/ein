@@ -1,0 +1,11 @@
+<div class="post-content canvas">
+	{{^has visibility="public"}}
+		{{#has visibility="members"}}
+			{{> "post/members" heading=(t "This post is for subscribers only")}}
+		{{else}}
+			{{> "post/members" heading=(t "This post is for paying subscribers only")}}
+		{{/has}}
+	{{else}}
+		{{content}}
+	{{/has}}
+</div>

@@ -1,0 +1,45 @@
+<div class="post-header simple-image-header wide canvas">
+	<div class="post-header-wrapper">
+
+		<div class="post-info">
+
+			<div class="post-header-meta">
+				<span class="post-date">
+					<time datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMMM DD, YYYY"}}</time>
+				</span>
+				<span class="post-reading-time">
+					{{reading_time}}
+				</span>
+				<span class="post-tag">
+					{{#if primary_tag}}
+					{{#primary_tag}}
+					<a class="post-tag-link" href="{{url}}">{{name}}</a>
+					{{/primary_tag}}
+					{{/if}}
+				</span>
+			</div>
+
+			<h2 class="post-title">{{ title }}</h2>
+
+		</div>
+	</div>
+	{{#if feature_image }}
+	<figure class="u-placeholder kg-width-wide horizontal post-header-feature">
+		<img class="u-object-fit post-header-feature-image"
+				 data-srcset="{{img_url feature_image size="m"}} 600w,
+											{{img_url feature_image size="l"}} 1200w,
+											{{img_url feature_image size="xl"}} 2000w"
+				 srcset="{{img_url feature_image size="m"}} 600w,
+								 {{img_url feature_image size="l"}} 1200w,
+								 {{img_url feature_image size="xl"}} 2000w"
+				 data-sizes="auto"
+				 sizes="(min-width: 1200px) 2000px,
+								(min-width: 600px) 1200px,
+								600px"
+				 src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+				 alt="{{title}}"
+		/>
+	</figure>
+	{{/if}}
+
+</div>

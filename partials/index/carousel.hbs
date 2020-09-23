@@ -1,0 +1,21 @@
+{{#is "home"}}
+<div class="carousel-container">
+		{{#get "posts" filter="featured:true" include="count.posts,authors" limit="3" as |post|}}
+			{{#if pagination.total }}
+			<div class="carousel">
+				{{#post}}
+					{{> "index/carousel-item"}}
+				{{/post}}
+			</div>
+			{{else}}
+			<div class="outer carousel-empty">
+				<div class="inner">
+					<div class="carousel-empty-description">
+						{{@site.description}}
+					</div>
+				</div>
+			</div>
+			{{/if }}
+		{{/get}}
+	</div>
+{{/is}}

@@ -1,0 +1,32 @@
+<script>
+	if (action == 'subscribe') {
+		$('body').addClass("subscribe-success");
+	}
+	if (action == 'signup') {
+		window.location = '{{@site.url}}/signup/?action=checkout';
+	}
+	if (action == 'checkout') {
+		$('body').addClass("signup-success");
+	}
+	if (action == 'signin') {
+		$('body').addClass("signin-success");
+	}
+	if (stripe == 'success') {
+		$('body').addClass("checkout-success");
+	}
+	if (stripe == 'billing-update-success') {
+		$('body').addClass("billing-success");
+	}
+	if (stripe == 'billing-update-cancel') {
+		$('body').addClass("billing-cancel");
+	}
+
+	$('.notification-close').click(function () {
+		$(this).parent().addClass('closed');
+		var uri = window.location.toString();
+		if (uri.indexOf("?") > 0) {
+			var clean_uri = uri.substring(0, uri.indexOf("?"));
+			window.history.replaceState({}, document.title, clean_uri);
+		}
+	});
+</script>

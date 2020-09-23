@@ -1,0 +1,52 @@
+{{!< ../maintall}}
+
+{{#if @member.paid}}
+
+	{{!-- Logged in, paying member: Redirect home --}}
+	<script>window.location = '{{@site.url}}';</script>
+
+{{else if @member}}
+
+	{{!-- Logged in, not paying: Check out --}}
+
+	<div class="inner">
+		<div class="membership-box">
+			<div class="membership-header">
+				<h1 class="membership-title">{{t "Choose your subscription"}}</h1>
+				<p class="membership-descriptino">{{t "Unlock full access to {blogtitle} and see the entire library of members-only content & updates" blogtitle=@site.title}}</p>
+			</div>
+			<div class="membership-content">
+				<div class="membership-plans checkout">
+
+					{{> "membership/monthly"}}
+					{{> "membership/yearly"}}
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+{{else}}
+
+	{{!-- Not logged in: Sign up --}}
+	<div class="inner members-page">
+		<form class="members-page-content" data-members-form="signup">
+			<h1 class="members-page-title">{{t "Subscribe to {blogtitle}" blogtitle=@blog.title}}</h1>
+			<p class="members-page-text">{{t "Subscribe to {blogtitle} and receive access to exclusive posts and content updates. We don't spam and your email won't be shared with third-parties." blogtitle=@blog.title}}</p>
+
+			<div class="members-page-input input-with-button">
+				<input data-members-email type="email" class="input" placeholder="{{t "Type your email..."}}" />
+				<div class="input-button">
+					<div class="loader">{{> "icons/bars"}}</div>
+					<button aria-label="Sign Up submit" type="submit">→</button>
+				</div>
+			</div>
+			<div class="message-success"><strong>{{t "Great!"}}</strong> {{t "Check your inbox and click the link to complete signup"}}</div>
+			<div class="message-error">{{t "Please enter a valid email address!"}}</div>
+
+			<p class="members-page-rel">{{t "Already a subscriber?"}} <a href="/signin">{{t "Sign In"}}</a>.</p>
+		</form>
+	</div>
+
+{{/if}}

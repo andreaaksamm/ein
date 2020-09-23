@@ -1,0 +1,56 @@
+{{!< main}}
+
+<div class="inner custom-page">
+	<div class="tags-page">
+		{{#page}}
+		<div class="tags-featured">
+			{{#foreach tags limit="3"}}
+			<a href="{{url}}" class="tag-featured">
+				{{#if feature_image}}
+				<div class="tag-image-border">
+					<div class="tag-image" style="background-image: url({{img_url feature_image size="m"}});"></div>
+				</div>
+				{{else}}
+				<div class="author-image-border">
+					<div class="author-image" style="background-image: url(/assets/images/ghost_s.png);"></div>
+				</div>
+				{{/if}}
+				<h1 class="tag-featured-name">
+					#{{slug}}
+				</h1>
+				<div class="tag-featured-count">
+					{{#get "posts" filter="tag:{{slug}}"}}
+					{{plural pagination.total empty=(t "No posts") singular=(t "1 post") plural=(t "% posts")}}
+					{{/get}}
+				</div>
+			</a>
+			{{/foreach}}
+		</div>
+
+		<div class="tags-more">
+			{{#foreach tags from="4"}}
+			<a href="{{url}}" class="tag-more">
+				{{#if feature_image}}
+				<div class="tag-image-border">
+					<div class="tag-image" style="background-image: url({{img_url feature_image size="s"}});"></div>
+				</div>
+				{{else}}
+				<div class="tag-image-border">
+					<div class="tag-image" style="background-image: url(/assets/images/ghost_s.png);"></div>
+				</div>
+				{{/if}}
+				<h2 class="tag-more-name">
+					#{{slug}}
+				</h2>
+				<div class="tag-more-count">
+					{{#get "posts" filter="tag:{{slug}}"}}
+					{{plural pagination.total empty=(t "No posts") singular=(t "1 post") plural=(t "% posts")}}
+					{{/get}}
+				</div>
+			</a>
+			{{/foreach}}
+		</div>
+
+		{{/page}}
+	</div>
+</div>

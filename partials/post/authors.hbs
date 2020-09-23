@@ -1,0 +1,42 @@
+<div id="authors" class="post-section-wrapper authors">
+	<div class="post-heading canvas">
+		<span class="post-heading-text">{{t "Written By"}}</span>
+	</div>
+
+	<div class="post-section canvas">
+		<div class="post-authors-detail">
+			{{#foreach authors}}
+				<div class="post-author-detail">
+					<a href="{{ url }}" class="post-author-detail-image-border">
+						{{#if profile_image}}
+							<div class="post-author-detail-image" style="background-image: url({{img_url profile_image size="s"}});"></div>
+						{{else}}
+							<div class="post-author-detail-image" style="background-image: url(/assets/images/ghost.png);"></div>
+						{{/if}}
+					</a>
+					<div class="post-author-detail-info">
+						<div class="post-author-detail-name">
+							<a href="{{url}}"><h3>{{name}}</h3></a>
+						</div>
+						{{#if bio}}
+							<div class="post-author-detail-description">
+								{{bio}}
+							</div>
+						{{/if}}
+						<ul class="post-author-detail-social">
+							{{#if facebook}}
+								<li class="post-author-social-item item-fb"><a target="_blank" href="{{facebook_url}}">{{> "icons/facebook"}}</a></li>
+							{{/if}}
+							{{#if twitter}}
+								<li class="post-author-social-item item-tw"><a target="_blank" href="{{twitter_url}}">{{> "icons/twitter"}}</a></li>
+							{{/if}}
+							{{#if website}}
+								<li class="post-author-social-item item-permalink"><a target="_blank" href="{{website}}">{{> "icons/permalink"}}</a></li>
+							{{/if}}
+						</ul>
+					</div>
+				</div>
+			{{/foreach}}
+		</div>
+	</div>
+</div>

@@ -1,0 +1,18 @@
+{{!< main}}
+
+{{#post}}
+
+{{> "post/sticky-header"}}
+
+{{> "post/simple-image-header"}}
+{{> "post/content"}}
+{{> "post/social"}}
+{{> "post/authors"}}
+{{> "post/comments"}}
+
+{{^if @member}}
+{{> "post/subscribe"}}
+{{/if}}
+
+{{> "post/readmore"}}
+{{/post}}

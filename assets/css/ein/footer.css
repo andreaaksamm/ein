@@ -1,0 +1,89 @@
+.site-footer {
+	padding: 1rem 0;
+	border-top: 1px solid var(--color-border);
+}
+
+.site-footer-inner {
+	height: 100%;
+	text-align: center;
+}
+
+.site-footer-inner > * + * {
+	margin-top: 1rem;
+}
+
+@media (min-width: 650px) {
+	.site-footer-inner {
+		text-align: left;
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.site-footer-inner > * + * {
+		margin-top: 0;
+	}
+}
+
+.site-footer-description {
+	flex: 1 1 auto;
+}
+
+.site-footer-social {
+	flex: 0 0 auto;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.site-footer-social .nav li {
+	margin: 0.75rem;
+	display: inline-block;
+	line-height: 0;
+}
+
+.site-footer-social .nav li svg {
+	fill: var(--color-social-links-footer);
+}
+
+.site-footer-social .nav li:hover svg {
+	fill: var(--color-social-links-footer-hover);
+}
+
+.site-footer-social .nav li.nav-facebook:hover svg {
+	fill: var(--color-facebook);
+}
+
+.site-footer-social .nav li.nav-twitter:hover svg {
+	fill: var(--color-twitter);
+}
+
+.site-footer-social .nav li.nav-instagram:hover svg {
+	fill: var(--color-instagram);
+}
+
+.site-footer-social .nav li.nav-github:hover svg {
+	fill: var(--color-github);
+}
+
+.site-footer-social .nav li.nav-linkedin:hover svg {
+	fill: var(--color-linkedin);
+}
+
+.site-footer-social .nav li.nav-mastodon:hover svg {
+	fill: var(--color-mastodon);
+}
+
+.site-footer-social .nav li.nav-pinterest:hover svg {
+	fill: var(--color-pinterest);
+}
+
+.site-footer-social .nav li.nav-youtube:hover svg {
+	fill: var(--color-youtube);
+}
+
+@media (min-width: 650px) {
+	.site-footer-social {
+		width: auto;
+	}
+}

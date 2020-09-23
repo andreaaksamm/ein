@@ -1,0 +1,65 @@
+.menu {
+	top: 70px;
+	right: 15px;
+	z-index: 500;
+	position: absolute;
+	min-width: 150px;
+	user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	transform: translate3d(0, 10%, 0);
+	transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+	text-align: right;
+	border: 1px solid #e7eaf3;
+	opacity: 0;
+	border-radius: 3px;
+	pointer-events: none;
+	background-color: #fff;
+	will-change: transform;
+}
+
+.menu-opened .menu {
+	transform: translate3d(0, 0, 0);
+	pointer-events: initial;
+	opacity: 1;
+}
+
+.menu-member,
+.menu-navigation {
+	padding: 0.5rem 0 0.5rem 2rem;
+}
+
+.menu-member {
+	border-top: 1px solid var(--color-border);
+}
+
+.navigation-item a {
+	display: block;
+	padding: .5rem 3rem .5rem 0;
+	position: relative;
+	font-size: 1.75rem;
+	text-decoration: none;
+}
+
+.navigation-item a::after {
+	position: absolute;
+	top: 16px;
+	right: 13px;
+	width: 4px;
+	height: 4px;
+	content: '';
+	transition: background 0.2s ease-out, border 0.2s ease-out;
+	border: 1px solid #8c8c8c;
+	border-radius: 20px;
+	background-color: #8c8c8c;
+}
+
+.navigation-item.nav-current a::after {
+	background-color: white;
+}
+
+.navigation-item:hover a::after {
+	background-color: white;
+}
+

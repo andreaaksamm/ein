@@ -1,0 +1,19 @@
+{{#if pagination}}
+<nav class="pagination">
+	{{#if prev}}
+		<a class="prev small" href="{{page_url prev}}">←</a>
+		<a class="prev big" href="{{page_url prev}}">{{> "icons/arrow-left" }}</a>
+	{{else}}
+		<span class="prev small deactivated">←</span>
+		<span class="prev deactivated">{{> "icons/arrow-left" }}</span>
+	{{/if}}
+	<span class="page-number">{{page}} / {{pages}}</span>
+	{{#if next}}
+		<a class="next small" href="{{page_url next}}">→</a>
+		<a class="next big" href="{{page_url next}}">{{> "icons/arrow-right" }}</a>
+	{{else}}
+		<span class="next small deactivated">→</span>
+		<span class="next deactivated">{{> "icons/arrow-right" }}</span>
+	{{/if}}
+</nav>
+{{/if}}

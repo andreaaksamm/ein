@@ -1,0 +1,32 @@
+.page-header {
+	padding: 5rem 0;
+	position: relative;
+	text-align: center;
+	border-bottom: 1px solid var(--color-border);
+}
+
+.page-header.post-header.with-background {
+	height: 300px;
+}
+
+.page-title {
+}
+
+@media (min-width: 550px) {
+	.page-header.post-header.with-background {
+		height: 350px;
+	}
+}
+
+.page-header.with-background {
+	color: white;
+	background: #111;
+}
+
+.page-header-wrapper {
+	height: 100%;
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+}
